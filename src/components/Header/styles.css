@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    margin-bottom: 150px;
+    border-bottom: 1px solid #6A6363;
+  
+  }
+  
+  header span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+  }
+  
+  #logo {
+    width: 292px;
+    height: 64px;
+    margin-left: 20px;
+  }
+  
+  .div-profile {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+  }
+  
+  .div-profile img {
+    margin-right: 8px;
+  }
