@@ -21,6 +21,9 @@
 </p>
 <br>
 
+## 🚀 Deploy
+https://techpines-front-p2b2m3pjr-marcossamuels-projects.vercel.app
+
 
 ## 🚀 Tecnologias Utilizadas
 
