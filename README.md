@@ -97,23 +97,6 @@
       </h6>
     </td>
     <td align="center">
-      <a href="https://styled-components.com">
-        <img src="https://skillicons.dev/icons?i=styledcomponents" width="65px" alt="CSS3 icon"/><br>
-        <sub>
-          <b>
-            <pre>Styled-Components</pre>
-          </b>
-        </sub>
-      </a>
-      <h6>
-        <details>
-          <summary>Motivo</summary>
-          <br/>
-          <i>Usado para deixar as páginas estilizadas.</i>
-        </details>
-      </h6>
-    </td>
-    <td align="center">
       <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/">
         <img src="https://skillicons.dev/icons?i=html" width="65px" alt="HTML5 icon"/><br>
         <sub>
