@@ -53,7 +53,7 @@ export async function deleteAlbum(id: string) {
 }
 
 
-export async function addNewTrack(track: { title: string; album_id: string }) {
+export async function addNewTrack(track: { name: string; album_id: string }) {
   try {
     const response = await api.post('/tracks', track);
     return response.data;

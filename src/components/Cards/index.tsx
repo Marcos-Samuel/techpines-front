@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';  // Importe useNavigate para nav
 import violao from '../../assets/modaeviolão.jpeg';
 import './styles.css';
 import { deleteAlbum } from '../../api/apiFuntions';
+import useUser from '../../hooks/useUser';
 
 export interface IAlbum {
     id: string;
@@ -21,10 +22,13 @@ export interface ICardProps {
 
 const Cards: React.FC<ICardProps> = ({ album }) => {
     const navigate = useNavigate(); 
+    
+  const { fetchArtist } = useUser();
 
     const handleDelete = async (id: string) => {
         try {
             await deleteAlbum(id);
+            fetchArtist("1");
          
         } catch (error) {
             console.error('Erro ao deletar álbum:', error);

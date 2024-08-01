@@ -1,25 +1,41 @@
+import { deleteTrack } from '../../api/apiFuntions';
 import './styles.css';
 
 interface IMusicCardProps {
   music: {
+    id: string;
     name: string;
     album_name: string;
-    duration: string; 
   };
+  setIsDeleted: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MusicCard: React.FC<IMusicCardProps> = ({ music }) => {
+
+const MusicCard: React.FC<IMusicCardProps> = ({ music, setIsDeleted }) => {
+
+  const handleDelete = async (id: string) => {
+    try {
+      await deleteTrack(id);
+      setIsDeleted(value => !value);
+     
+    } catch (error) {
+        console.error('Erro ao deletar álbum:', error);
+    }
+  };
   return (
     <div className="music-card">
-      <div>
+      <div className='conteint-name'>
         <p>{music.name}</p>
       </div>
       <div>
         <p>{music.album_name}</p>
       </div>
       <div>
-        <p>{music.duration}</p>
+      <p>3:20</p>
       </div>
+ 
+      <p onClick={() => handleDelete(music.id)} >x</p>
+     
     </div>
   );
 };

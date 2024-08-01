@@ -8,7 +8,14 @@ export interface UserContextType {
   fetchArtist: (id: string) => void;
 }
 
-const UserContext = createContext<UserContextType | undefined>(undefined);
+const defaultContextValue: UserContextType = {
+  artist: null,
+  loading: true,
+  fetchArtist: () => {},
+  
+};
+
+const UserContext = createContext<UserContextType>(defaultContextValue);
 
 interface UserProviderProps {
   children: ReactNode;

@@ -1,6 +1,14 @@
 .music-card{
-
     width: 50vw;
     display: flex;
     justify-content: space-between;
+}
+
+.music-card div {
+    flex: 1; 
+  }
+
+.music-card p {
+    
+    cursor: pointer;
 }

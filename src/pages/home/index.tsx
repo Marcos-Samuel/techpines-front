@@ -28,7 +28,7 @@ interface AlbumFormInputs {
 const albumSchema = z.object({
   name: z.string().nonempty("O nome é obrigatório"),
   release_year: z.string().length(4, "Ano de lançamento deve ter 4 dígitos"),
-  image_url: z.string().url("URL da imagem inválida"),
+  image_url: z.string().optional()
 });
 
 type AlbumFormData = z.infer<typeof albumSchema>;
@@ -39,7 +39,8 @@ function Home() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const { artist } = useUser();
+
+  const { artist, fetchArtist } = useUser();
 
   const {
     register,
@@ -57,6 +58,7 @@ function Home() {
       });
 
       closeModal();
+      fetchArtist("1")
     } catch (error) {
       console.error("Erro ao adicionar álbum:", error);
     }
@@ -89,7 +91,6 @@ function Home() {
             <div>
               <label htmlFor="image_url">Capa do album</label>
               <input id="image_url" {...register("image_url")} />
-              {errors.image_url && <span>{errors.image_url.message}</span>}
             </div>
 
             <div className="modal-footer">
