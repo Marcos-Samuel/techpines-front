@@ -14,7 +14,10 @@ export interface IArtist {
   id: number;
   name: string;
   albums: IAlbum[];
-  tracks: any[];
+  tracks: ITracks[];
+}
+interface ITracks {
+  name: string;
 }
 interface AlbumFormInputs {
   name: string;

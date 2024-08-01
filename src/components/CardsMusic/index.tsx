@@ -1,19 +1,25 @@
+import './styles.css';
 
-import './styles.css'
+interface IMusicCardProps {
+  music: {
+    name: string;
+    album_name: string;
+    duration: string; 
+  };
+}
 
-const MusicCard = ({ music }) => {
+const MusicCard: React.FC<IMusicCardProps> = ({ music }) => {
   return (
     <div className="music-card">
       <div>
         <p>{music.name}</p>
       </div>
       <div>
-      <p>{music.album_name}</p>
+        <p>{music.album_name}</p>
       </div>
       <div>
-      <p>3:20</p>
+        <p>{music.duration}</p>
       </div>
-      
     </div>
   );
 };

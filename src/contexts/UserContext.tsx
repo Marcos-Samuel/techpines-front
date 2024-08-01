@@ -2,7 +2,6 @@ import { createContext, ReactNode } from 'react';
 import useUserProvider from '../hooks/useUserProvider';
 import { IArtist } from '../pages/home';
 
-// Definição do tipo do contexto
 export interface UserContextType {
   artist: IArtist | null; 
   loading: boolean;
